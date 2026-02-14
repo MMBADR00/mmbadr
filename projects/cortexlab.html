@@ -7,9 +7,7 @@
   <title>CortexLab | Software Project</title>
   <meta name="description" content="CortexLab project page: overview, integrated battery tools, and download access." />
 
-  <!-- IMPORTANT:
-       If this file is located at /projects/cortexlab.html, keep ../style.css
-       If you place it in the root (same folder as index.html), change to style.css -->
+  <!-- If this file is located at /projects/cortexlab.html, keep ../style.css -->
   <link rel="stylesheet" href="../style.css" />
 
   <script>
@@ -17,7 +15,6 @@
     document.documentElement.classList.add("js");
   </script>
 
-  <!-- Page-only styles (keeps your main style.css unchanged) -->
   <style>
     .crumbs { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
     .crumbs a { color: rgba(169,182,211,0.92); }
@@ -31,30 +28,16 @@
       gap: 14px;
       margin-top: 10px;
     }
-
     @media (max-width: 820px) {
       .tool-grid { grid-template-columns: 1fr; }
     }
 
     .tool-card {
-      display: flex;
-      gap: 12px;
       padding: 14px;
       border: 1px solid rgba(255,255,255,0.12);
       border-radius: 16px;
       background: rgba(255,255,255,0.03);
       box-shadow: 0 18px 42px rgba(0,0,0,0.36);
-      align-items: flex-start;
-    }
-
-    .tool-icon {
-      width: 64px;
-      height: 64px;
-      object-fit: contain;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.10);
-      background: rgba(0,0,0,0.18);
-      flex: 0 0 auto;
     }
 
     .tool-title {
@@ -109,13 +92,6 @@
       background: rgba(255,255,255,0.06);
     }
 
-    .note {
-      margin: 10px 0 0 0;
-      color: var(--muted);
-      line-height: 1.7;
-      font-size: 14px;
-    }
-
     code.inline {
       padding: 2px 6px;
       border-radius: 8px;
@@ -129,13 +105,9 @@
 </head>
 
 <body>
-  <!-- Simple nav for this page -->
   <nav class="topnav" aria-label="Primary navigation">
     <div class="container nav-inner">
       <div class="nav-links" aria-label="Navigation links">
-        <!-- IMPORTANT:
-             If your index is at root, keep ../index.html
-             If you place cortexlab.html at root, change to index.html -->
         <a href="../index.html#projects">Home</a>
         <a href="#overview">Overview</a>
         <a href="#tools">Tools</a>
@@ -194,120 +166,88 @@
       <div class="section-head"><h2>Tools</h2></div>
       <div class="card">
         <p class="muted">
-          The following tools are integrated into CortexLab. Each card shows the tool icon, title, and a short description.
+          The following tools are integrated into CortexLab. Each card shows the tool title and a short description.
         </p>
 
         <div class="tool-grid" role="list" aria-label="CortexLab integrated tools">
-          <!-- IMPORTANT: Where to add icons
-               Put the PNG files in: /assets/tools/
-               Example path from this page (projects/cortexlab.html): ../assets/tools/DocumentationIcon.png
-               Keep the same filenames exactly as below. -->
-
           <article class="tool-card reveal" role="listitem">
-            <img class="tool-icon" src="../assets/tools/DocumentationIcon.png" alt="Documentation tool icon" loading="lazy" />
-            <div>
-              <h3 class="tool-title">Documentation</h3>
-              <p class="tool-desc">
-                This tool provides an organized viewer for manuals, references, and application guidance.
-                It helps users navigate tool descriptions, usage steps, and supporting technical notes.
-              </p>
-            </div>
+            <h3 class="tool-title">Documentation</h3>
+            <p class="tool-desc">
+              This tool provides an organized viewer for manuals, references, and application guidance.
+              It helps users navigate tool descriptions, usage steps, and supporting technical notes.
+            </p>
           </article>
 
           <article class="tool-card reveal" role="listitem">
-            <img class="tool-icon" src="../assets/tools/DriveCycleIcon.png" alt="Drive Cycle tool icon" loading="lazy" />
-            <div>
-              <h3 class="tool-title">Drive Cycle</h3>
-              <p class="tool-desc">
-                This tool supports generating and analyzing drive cycles, including route based motion profiles and
-                visualization for EV related studies.
-              </p>
-            </div>
+            <h3 class="tool-title">Drive Cycle</h3>
+            <p class="tool-desc">
+              This tool supports generating and analyzing drive cycles, including route based motion profiles and
+              visualization for EV related studies.
+            </p>
           </article>
 
           <article class="tool-card reveal" role="listitem">
-            <img class="tool-icon" src="../assets/tools/ConnectionIcon.png" alt="Connection tool icon" loading="lazy" />
-            <div>
-              <h3 class="tool-title">Connection</h3>
-              <p class="tool-desc">
-                This tool provides an interactive graphical simulation environment for constructing battery pack
-                configurations, supporting Series, Parallel, and Combined (Series Parallel) arrangements. It enables
-                users to define the number of cells and modules and visualizes the resulting topology.
-              </p>
-            </div>
+            <h3 class="tool-title">Connection</h3>
+            <p class="tool-desc">
+              This tool provides an interactive graphical simulation environment for constructing battery pack
+              configurations, supporting Series, Parallel, and Combined (Series Parallel) arrangements. It enables
+              users to define the number of cells and modules and visualizes the resulting topology.
+            </p>
           </article>
 
           <article class="tool-card reveal" role="listitem">
-            <img class="tool-icon" src="../assets/tools/BatteryKPIsIcon.png" alt="Battery KPIs tool icon" loading="lazy" />
-            <div>
-              <h3 class="tool-title">Battery KPIs</h3>
-              <p class="tool-desc">
-                This tool estimates key battery performance indicators, including State of Charge (SOC), State of Health
-                (SOH), State of Power (SOP), Remaining Useful Life (RUL), and Depth of Discharge (DOD). It supports
-                different estimation methods and allows exporting results.
-              </p>
-            </div>
+            <h3 class="tool-title">Battery KPIs</h3>
+            <p class="tool-desc">
+              This tool estimates key battery performance indicators, including State of Charge (SOC), State of Health
+              (SOH), State of Power (SOP), Remaining Useful Life (RUL), and Depth of Discharge (DOD). It supports
+              different estimation methods and allows exporting results.
+            </p>
           </article>
 
           <article class="tool-card reveal" role="listitem">
-            <img class="tool-icon" src="../assets/tools/MachineLearningPredictionIcon.png" alt="Machine Learning Prediction tool icon" loading="lazy" />
-            <div>
-              <h3 class="tool-title">Machine Learning Prediction</h3>
-              <p class="tool-desc">
-                This tool supports regression based prediction workflows, including data upload, feature and target
-                selection, training and testing, evaluation metrics, plotting, and exporting models.
-              </p>
-            </div>
+            <h3 class="tool-title">Machine Learning Prediction</h3>
+            <p class="tool-desc">
+              This tool supports regression based prediction workflows, including data upload, feature and target
+              selection, training and testing, evaluation metrics, plotting, and exporting models.
+            </p>
           </article>
 
           <article class="tool-card reveal" role="listitem">
-            <img class="tool-icon" src="../assets/tools/OfflineStateEstimationIcon.png" alt="Offline State Estimation tool icon" loading="lazy" />
-            <div>
-              <h3 class="tool-title">Offline State Estimation</h3>
-              <p class="tool-desc">
-                This tool supports offline SOC estimation workflows, including Coulomb Counting, rated capacity
-                estimation, and comparison plots. It includes configuration, analysis, and export features.
-              </p>
-            </div>
+            <h3 class="tool-title">Offline State Estimation</h3>
+            <p class="tool-desc">
+              This tool supports offline SOC estimation workflows, including Coulomb Counting, rated capacity
+              estimation, and comparison plots. It includes configuration, analysis, and export features.
+            </p>
           </article>
 
           <article class="tool-card reveal" role="listitem">
-            <img class="tool-icon" src="../assets/tools/OCVSOCAnalysisIcon.png" alt="OCV-SOC Analysis tool icon" loading="lazy" />
-            <div>
-              <h3 class="tool-title">OCV-SOC Analysis</h3>
-              <p class="tool-desc">
-                This tool performs Open Circuit Voltage based SOC estimation using polynomial fitting and chi-squared
-                error analysis. It supports importing data, plotting OCV-SOC curves, and exporting fitted models.
-              </p>
-            </div>
+            <h3 class="tool-title">OCV-SOC Analysis</h3>
+            <p class="tool-desc">
+              This tool performs Open Circuit Voltage based SOC estimation using polynomial fitting and chi-squared
+              error analysis. It supports importing data, plotting OCV-SOC curves, and exporting fitted models.
+            </p>
           </article>
 
           <article class="tool-card reveal" role="listitem">
-            <img class="tool-icon" src="../assets/tools/RTMonitoringIcon.png" alt="Real Time Monitoring tool icon" loading="lazy" />
-            <div>
-              <h3 class="tool-title">Real Time Monitoring</h3>
-              <p class="tool-desc">
-                This tool interfaces with Arduino based sensing to monitor voltage, current, and temperature. It also
-                supports real time Coulomb Counting and data driven predictions using trained models.
-              </p>
-            </div>
+            <h3 class="tool-title">Real Time Monitoring</h3>
+            <p class="tool-desc">
+              This tool interfaces with Arduino based sensing to monitor voltage, current, and temperature. It also
+              supports real time Coulomb Counting and data driven predictions using trained models.
+            </p>
           </article>
 
           <article class="tool-card reveal" role="listitem">
-            <img class="tool-icon" src="../assets/tools/MachineLearningClassificationIcon.png" alt="Machine Learning Classification tool icon" loading="lazy" />
-            <div>
-              <h3 class="tool-title">Machine Learning Classification</h3>
-              <p class="tool-desc">
-                This tool supports classification workflows, including data upload, feature and class selection,
-                training and evaluation, confusion matrix, and exporting classifiers.
-              </p>
-            </div>
+            <h3 class="tool-title">Machine Learning Classification</h3>
+            <p class="tool-desc">
+              This tool supports classification workflows, including data upload, feature and class selection,
+              training and evaluation, confusion matrix, and exporting classifiers.
+            </p>
           </article>
         </div>
 
-        <p class="note">
-          If any icon does not appear, confirm that each file exists in <code class="inline">assets/tools/</code> and that
-          the filename matches exactly, including capitalization (GitHub Pages is case sensitive).
+        <p class="muted" style="margin-top:10px;">
+          If you later decide to re-add icons, place them in <code class="inline">assets/tools/</code> and insert an
+          <code class="inline">&lt;img&gt;</code> line at the top of each tool card.
         </p>
       </div>
     </section>
@@ -316,7 +256,8 @@
       <div class="section-head"><h2>Download</h2></div>
       <div class="card">
         <p class="muted">
-          The download link should be hosted on a service that enforces authentication, such as Google Drive with restricted access.
+          GitHub Pages cannot do server side authentication. If you need restricted downloads, host the file on a service
+          that enforces authentication, such as Google Drive with restricted access.
         </p>
 
         <div class="btn-row" aria-label="Download actions">
@@ -329,9 +270,9 @@
           <a class="btn btn-outline" href="../index.html#projects">Back to Projects</a>
         </div>
 
-        <p class="note">
-          To restrict access, set the file sharing to <strong>Restricted</strong> in Google Drive and add only approved email accounts.
-          Users who are not allowed will be blocked until access is granted.
+        <p class="muted" style="margin-top:10px;">
+          For Google Drive, set the file sharing to <strong>Restricted</strong> and grant access only to approved email
+          accounts. Users without permission cannot download until access is granted.
         </p>
       </div>
     </section>
