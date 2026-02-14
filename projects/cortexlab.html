@@ -92,7 +92,17 @@
       text-decoration: none;
     }
 
-    .version-grid{
+    .btn-outline{
+      border-color: rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .btn-outline:hover{
+      border-color: rgba(102,163,255,0.55);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .download-grid{
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 14px;
@@ -100,10 +110,10 @@
     }
 
     @media (max-width: 820px) {
-      .version-grid { grid-template-columns: 1fr; }
+      .download-grid { grid-template-columns: 1fr; }
     }
 
-    .version-card{
+    .download-card{
       padding: 14px;
       border: 1px solid rgba(255,255,255,0.12);
       border-radius: 16px;
@@ -111,13 +121,13 @@
       box-shadow: 0 18px 42px rgba(0,0,0,0.30);
     }
 
-    .version-title{
+    .download-title{
       margin: 0;
       font-size: 15px;
       color: rgba(233,239,255,0.95);
     }
 
-    .version-text{
+    .download-text{
       margin: 8px 0 0 0;
       color: rgba(169,182,211,0.96);
       line-height: 1.65;
@@ -133,7 +143,6 @@
         <a href="../index.html#projects">Home</a>
         <a href="#overview">Overview</a>
         <a href="#tools">Tools</a>
-        <a href="#versions">Version Overview</a>
         <a href="#download">Download</a>
       </div>
     </div>
@@ -290,37 +299,38 @@
       </div>
     </section>
 
-    <section id="versions" class="section reveal">
-      <div class="section-head"><h2>Version Overview</h2></div>
-      <div class="card">
-        <div class="version-grid" aria-label="CortexLab version overview">
-          <div class="version-card reveal">
-            <h3 class="version-title">CortexLab V1.9.0</h3>
-            <p class="version-text">
-              Current tools include Documentation, Drive Cycle, Connection, Battery KPIs, Machine Learning Prediction,
-              Offline State Estimation, OCV-SOC Analysis, Real Time Monitoring, and Machine Learning Classification.
-            </p>
-          </div>
-
-          <div class="version-card reveal">
-            <h3 class="version-title">CortexLab V1.10.1</h3>
-            <p class="version-text">
-              Current tools include Documentation, Drive Cycle, Connection, Battery KPIs, Machine Learning Prediction,
-              Offline State Estimation, OCV-SOC Analysis, Real Time Monitoring, and Machine Learning Classification.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="download" class="section reveal">
       <div class="section-head"><h2>Download</h2></div>
       <div class="card">
-        <div class="btn-row" aria-label="Download actions">
-          <a class="btn" target="_blank" rel="noopener"
-             href="https://drive.google.com/drive/folders/1w0-qN9ysdqVgR4RPBCCt6kRBDQruHroC?usp=sharing">
-            CortexLab V1.10.1
-          </a>
+        <div class="download-grid" aria-label="CortexLab download versions">
+          <div class="download-card reveal">
+            <h3 class="download-title">CortexLab V1.9.0</h3>
+            <p class="download-text">
+              This version include Documentation, Drive Cycle, Connection, Battery KPIs, Machine Learning Prediction,
+              Offline State Estimation, OCV-SOC Analysis, Real Time Monitoring, and Machine Learning Classification.
+            </p>
+            <div class="btn-row">
+              <a class="btn btn-outline" target="_blank" rel="noopener"
+                 href="https://drive.google.com/drive/folders/1w0-qN9ysdqVgR4RPBCCt6kRBDQruHroC?usp=sharing">
+                Download CortexLab V1.9.0
+              </a>
+            </div>
+          </div>
+
+          <div class="download-card reveal">
+            <h3 class="download-title">CortexLab V1.10.0</h3>
+            <p class="download-text">
+              This version include Documentation, Drive Cycle, Connection, Battery KPIs, Machine Learning Prediction,
+              Offline State Estimation, OCV-SOC Analysis, Real Time Monitoring, and Machine Learning Classification,
+              and Model-based Methods.
+            </p>
+            <div class="btn-row">
+              <a class="btn" target="_blank" rel="noopener"
+                 href="https://drive.google.com/drive/folders/1w0-qN9ysdqVgR4RPBCCt6kRBDQruHroC?usp=sharing">
+                Download CortexLab V1.10.0
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
