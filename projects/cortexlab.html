@@ -5,10 +5,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CortexLab | Software Project</title>
-  <meta name="description" content="CortexLab project page: overview, integrated battery tools, and download access." />
+  <meta name="description" content="CortexLab project page: integrated battery tools and download access." />
 
-  <!-- If this file is located at /projects/cortexlab.html, keep ../style.css
-       If you place it in the root, change to style.css -->
   <link rel="stylesheet" href="../style.css" />
 
   <script>
@@ -19,8 +17,6 @@
     .crumbs { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
     .crumbs a { color: rgba(169,182,211,0.92); }
     .crumbs a:hover { color: var(--text); text-decoration: none; }
-
-    .project-hero-sub { margin: 6px 0 0 0; color: var(--muted); font-size: 16px; }
 
     .tool-grid {
       display: grid;
@@ -95,16 +91,6 @@
       background: rgba(102,163,255,0.16);
       text-decoration: none;
     }
-
-    .btn-outline {
-      border-color: rgba(255,255,255,0.18);
-      background: rgba(255,255,255,0.04);
-    }
-
-    .btn-outline:hover {
-      border-color: rgba(255,255,255,0.28);
-      background: rgba(255,255,255,0.06);
-    }
   </style>
 </head>
 
@@ -113,7 +99,6 @@
     <div class="container nav-inner">
       <div class="nav-links" aria-label="Navigation links">
         <a href="../index.html#projects">Home</a>
-        <a href="#overview">Overview</a>
         <a href="#tools">Tools</a>
         <a href="#download">Download</a>
       </div>
@@ -136,12 +121,6 @@
           <div class="spacer"></div>
 
           <h1 class="hero-title">CortexLab</h1>
-          <p class="project-hero-sub">
-            This application is implemented using the Python programming language and employs the PySide6 library to
-            build a flexible, modular, and user friendly Graphical User Interface (GUI). It integrates multiple
-            specialized tools into a unified environment, each targeting different aspects of battery modeling,
-            diagnosis, real time monitoring, and performance evaluation.
-          </p>
         </div>
       </div>
 
@@ -150,18 +129,6 @@
   </header>
 
   <main class="container main">
-    <section id="overview" class="section reveal">
-      <div class="section-head"><h2>Overview</h2></div>
-      <div class="card">
-        <p class="muted">
-          This application is implemented using the Python programming language and employs the PySide6 library to
-          build a flexible, modular, and user friendly Graphical User Interface (GUI). It integrates multiple
-          specialized tools into a unified environment, each targeting different aspects of battery modeling,
-          diagnosis, real time monitoring, and performance evaluation.
-        </p>
-      </div>
-    </section>
-
     <section id="tools" class="section reveal">
       <div class="section-head"><h2>Tools</h2></div>
       <div class="card">
@@ -274,13 +241,10 @@
       <div class="section-head"><h2>Download</h2></div>
       <div class="card">
         <div class="btn-row" aria-label="Download actions">
-          <!-- Replace the URL below with your Google Drive link -->
           <a class="btn" target="_blank" rel="noopener"
              href="https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing">
             Download CortexLab
           </a>
-
-          <a class="btn btn-outline" href="../index.html#projects">Back to Projects</a>
         </div>
       </div>
     </section>
