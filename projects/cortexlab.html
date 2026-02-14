@@ -3,10 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CortexLab | Project</title>
-  <meta name="description" content="CortexLab project page: tools overview, icons, descriptions, and password-gated download." />
+  <title>CortexLab | Software Project</title>
+  <meta name="description" content="CortexLab: an integrated desktop suite for battery workflows and analytics." />
   <link rel="stylesheet" href="../style.css" />
-
   <script>
     document.documentElement.classList.add("js");
   </script>
@@ -24,27 +23,26 @@
     </div>
   </nav>
 
-  <header class="site-header">
+  <header class="site-header site-header-compact">
     <div class="bg-grid" aria-hidden="true"></div>
     <div class="bg-scanline" aria-hidden="true"></div>
 
     <div class="container header-wrap">
-      <div class="hero">
+      <div class="hero hero-compact">
         <div class="hero-left reveal">
           <div class="badge-row">
-            <span class="badge">Battery Analytics</span>
-            <span class="badge badge-2">SOC and SOH</span>
-            <span class="badge badge-3">Machine Learning</span>
-            <span class="badge badge-4">PySide6 Desktop</span>
+            <span class="badge">Software Project</span>
+            <span class="badge badge-2">Battery Analytics</span>
+            <span class="badge badge-3">SOC and SOH Estimation</span>
+            <span class="badge badge-4">Monitoring and ML</span>
           </div>
 
           <h1 class="hero-title">CortexLab</h1>
-          <p class="hero-subtitle">Integrated tools for battery workflows and estimation tasks</p>
+          <p class="hero-subtitle">Integrated desktop suite for battery workflows</p>
 
-          <div class="profile-links" aria-label="Project links">
-            <a class="plink" href="../index.html#contact">Contact</a>
-            <a class="plink" href="../index.html#projects">Projects</a>
-            <a class="plink" href="#download">Download</a>
+          <div class="brand-row" aria-label="Affiliation">
+            <img class="brand-logo" src="../assets/KAUST.jpg" alt="KAUST logo" loading="lazy" />
+            <span class="muted">Energy Cortex, KAUST</span>
           </div>
         </div>
       </div>
@@ -54,145 +52,175 @@
   </header>
 
   <main class="container main">
+    <!-- Overview -->
     <section id="overview" class="section reveal">
       <div class="section-head"><h2>Overview</h2></div>
-      <div class="card">
-        <p class="muted">
-          CortexLab groups multiple battery engineering tools into one consistent desktop experience.
-          It focuses on data loading, signal visualization, battery KPI computation, OCV-SOC workflows,
-          offline SOC and SOH estimation, real-time monitoring integration, and ML-based prediction.
-        </p>
 
-        <div class="spacer"></div>
-
+      <div class="card card-glow">
         <div class="project-hero">
-          <img
-            class="project-hero-img"
-            src="../assets/projects/cortexlab.png"
-            alt="CortexLab screenshot"
-            loading="lazy"
-          />
+          <div class="project-hero-media">
+            <!-- Optional: add your screenshot to /assets/projects/cortexlab.png -->
+            <img
+              src="../assets/projects/cortexlab.png"
+              alt="CortexLab project cover image"
+              loading="lazy"
+              onerror="this.style.display='none'; this.parentElement.classList.add('no-media');"
+            />
+          </div>
+
+          <div class="project-hero-body">
+            <p class="muted">
+              CortexLab is an integrated suite that groups multiple battery tools in one desktop workflow.
+              It organizes typical battery analysis and estimation tasks, including SOC and SOH estimation,
+              OCV-SOC analysis, real-time monitoring, drive cycle analysis, and machine learning prediction and classification.
+            </p>
+
+            <ul class="bullets bullets-tight">
+              <li>Unified tool launcher and consistent UI layout</li>
+              <li>Offline workflows for data import, analysis, plots, and exports</li>
+              <li>Online workflows for monitoring and real-time computations</li>
+              <li>Machine learning workflows for training and inference</li>
+            </ul>
+
+            <div class="project-actions">
+              <a class="btn" href="#tools">Explore tools</a>
+              <a class="btn btn-outline" href="#download">Go to download</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Tools -->
     <section id="tools" class="section reveal">
-      <div class="section-head"><h2>Tools</h2></div>
+      <div class="section-head"><h2>Tools inside CortexLab</h2></div>
+
       <div class="card">
         <p class="muted">
-          Each module below has an icon and a short description. Replace the icon paths with your real files.
+          Each module is opened from CortexLab as a dedicated tool. The icons below use your provided PNG filenames.
         </p>
 
-        <div class="spacer"></div>
-
-        <div class="tool-grid" role="list">
-          <div class="tool-item" role="listitem">
-            <img class="tool-icon" src="../assets/tools/connection.png" alt="Connection Viewer icon" />
-            <div class="tool-text">
-              <div class="tool-title">Connection Viewer</div>
-              <div class="tool-desc">Pin mapping, wiring guidance, sensor configuration, and connection validation screens.</div>
+        <div class="tool-grid">
+          <article class="tool-card">
+            <div class="tool-icon">
+              <img src="../assets/tools/DocumentationIcon.png" alt="Documentation tool icon" loading="lazy" />
             </div>
-          </div>
-
-          <div class="tool-item" role="listitem">
-            <img class="tool-icon" src="../assets/tools/ocv.png" alt="OCV-SOC Analysis icon" />
-            <div class="tool-text">
-              <div class="tool-title">OCV-SOC Analysis</div>
-              <div class="tool-desc">OCV curve handling, sorting, fitting, and SOC estimation support using OCV-based workflows.</div>
+            <div class="tool-body">
+              <h3 class="tool-title">Documentation</h3>
+              <p class="muted">Central viewer for manuals, app guidance, and reference material used across the suite.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="tool-item" role="listitem">
-            <img class="tool-icon" src="../assets/tools/offline.png" alt="Offline State Estimation icon" />
-            <div class="tool-text">
-              <div class="tool-title">Offline State Estimation</div>
-              <div class="tool-desc">Offline SOC and SOH estimation from CSV or Excel data with plotting and export.</div>
+          <article class="tool-card">
+            <div class="tool-icon">
+              <img src="../assets/tools/ConnectionIcon.png" alt="Connection tool icon" loading="lazy" />
             </div>
-          </div>
+            <div class="tool-body">
+              <h3 class="tool-title">Connection Viewer</h3>
+              <p class="muted">Connection and wiring guidance for sensors and hardware interfaces used by monitoring tools.</p>
+            </div>
+          </article>
 
-          <div class="tool-item" role="listitem">
-            <img class="tool-icon" src="../assets/tools/rt.png" alt="RT Monitoring icon" />
-            <div class="tool-text">
-              <div class="tool-title">RT Monitoring</div>
-              <div class="tool-desc">Real-time acquisition and visualization for sensors, with estimation and logging support.</div>
+          <article class="tool-card">
+            <div class="tool-icon">
+              <img src="../assets/tools/BatteryKPIsIcon.png" alt="Battery KPIs tool icon" loading="lazy" />
             </div>
-          </div>
+            <div class="tool-body">
+              <h3 class="tool-title">Battery KPIs</h3>
+              <p class="muted">Battery KPI computations and reporting, including key health and performance indicators.</p>
+            </div>
+          </article>
 
-          <div class="tool-item" role="listitem">
-            <img class="tool-icon" src="../assets/tools/kpi.png" alt="Battery KPIs icon" />
-            <div class="tool-text">
-              <div class="tool-title">Battery KPIs</div>
-              <div class="tool-desc">Compute KPI metrics such as SOC, SOH-related indicators, and reporting summaries.</div>
+          <article class="tool-card">
+            <div class="tool-icon">
+              <img src="../assets/tools/OCVSOCAnalysisIcon.png" alt="OCV-SOC Analysis tool icon" loading="lazy" />
             </div>
-          </div>
+            <div class="tool-body">
+              <h3 class="tool-title">OCV-SOC Analysis</h3>
+              <p class="muted">OCV curve processing and fitting workflows used for SOC-related analysis and model preparation.</p>
+            </div>
+          </article>
 
-          <div class="tool-item" role="listitem">
-            <img class="tool-icon" src="../assets/tools/drivecycle.png" alt="Drive Cycle icon" />
-            <div class="tool-text">
-              <div class="tool-title">Drive Cycle</div>
-              <div class="tool-desc">Drive cycle loading, processing, slope and profile evaluation, and analysis plots.</div>
+          <article class="tool-card">
+            <div class="tool-icon">
+              <img src="../assets/tools/OfflineStateEstimationIcon.png" alt="Offline State Estimation tool icon" loading="lazy" />
             </div>
-          </div>
+            <div class="tool-body">
+              <h3 class="tool-title">Offline State Estimation</h3>
+              <p class="muted">Offline SOC and SOH estimation workflows with data preview, operations, and visualization.</p>
+            </div>
+          </article>
 
-          <div class="tool-item" role="listitem">
-            <img class="tool-icon" src="../assets/tools/ml.png" alt="Machine Learning Prediction icon" />
-            <div class="tool-text">
-              <div class="tool-title">Machine Learning Prediction</div>
-              <div class="tool-desc">Training and evaluation utilities for regression models used in estimation tasks.</div>
+          <article class="tool-card">
+            <div class="tool-icon">
+              <img src="../assets/tools/RTMonitoringIcon.png" alt="RT Monitoring tool icon" loading="lazy" />
             </div>
-          </div>
+            <div class="tool-body">
+              <h3 class="tool-title">RT Monitoring</h3>
+              <p class="muted">Real-time monitoring workflow with live sensor streams, plots, and estimation utilities.</p>
+            </div>
+          </article>
 
-          <div class="tool-item" role="listitem">
-            <img class="tool-icon" src="../assets/tools/docs.png" alt="Documentation Viewer icon" />
-            <div class="tool-text">
-              <div class="tool-title">Documentation Viewer</div>
-              <div class="tool-desc">Built-in documentation pages and downloadable supplementary materials.</div>
+          <article class="tool-card">
+            <div class="tool-icon">
+              <img src="../assets/tools/DriveCycleIcon.png" alt="Drive Cycle tool icon" loading="lazy" />
             </div>
-          </div>
+            <div class="tool-body">
+              <h3 class="tool-title">Drive Cycle</h3>
+              <p class="muted">Drive cycle workflows for evaluation, profile viewing, and analysis-oriented visualization.</p>
+            </div>
+          </article>
+
+          <article class="tool-card">
+            <div class="tool-icon">
+              <img src="../assets/tools/MachineLearningPredictionIcon.png" alt="Machine Learning Prediction tool icon" loading="lazy" />
+            </div>
+            <div class="tool-body">
+              <h3 class="tool-title">ML Prediction</h3>
+              <p class="muted">Regression workflows for training, testing, metrics, plots, and exporting predictive models.</p>
+            </div>
+          </article>
+
+          <article class="tool-card">
+            <div class="tool-icon">
+              <img src="../assets/tools/MachineLearningClassificationIcon.png" alt="Machine Learning Classification tool icon" loading="lazy" />
+            </div>
+            <div class="tool-body">
+              <h3 class="tool-title">ML Classification</h3>
+              <p class="muted">Classification workflows for model training, evaluation, reporting, and export.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
+    <!-- Download -->
     <section id="download" class="section reveal">
       <div class="section-head"><h2>Download</h2></div>
+
       <div class="card">
         <p class="muted">
           Enter the password to unlock the download button.
-          This check runs in the browser, so it is not secure access control for private files.
-          For real protection, host downloads behind authenticated access.
         </p>
 
-        <div class="spacer"></div>
-
-        <div class="download-gate">
-          <label class="gate-label" for="dl-pass">Password</label>
-          <div class="gate-row">
-            <input id="dl-pass" class="gate-input" type="password" placeholder="Enter password" autocomplete="current-password" />
-            <button id="dl-unlock" class="btn" type="button">Unlock</button>
+        <div class="download-box" role="group" aria-label="Password protected download">
+          <label class="dl-label" for="dl-pass">Password</label>
+          <div class="dl-row">
+            <input class="dl-input" id="dl-pass" type="password" placeholder="Enter password" autocomplete="current-password" />
+            <button class="btn" id="dl-unlock" type="button">Unlock</button>
           </div>
 
-          <p id="dl-msg" class="gate-msg muted" aria-live="polite"></p>
+          <p class="dl-msg" id="dl-msg" aria-live="polite"></p>
 
-          <div class="spacer"></div>
+          <div class="dl-actions" id="dl-actions" hidden>
+            <!-- Replace the file name with your real download artifact -->
+            <a class="btn" href="../downloads/CortexLab.zip" download>Download CortexLab</a>
+          </div>
 
-          <!-- Locked by default: href is empty and button is disabled -->
-          <a
-            id="dl-link"
-            class="btn btn-outline btn-disabled"
-            href=""
-            download
-            aria-disabled="true"
-          >
-            Download CortexLab
-          </a>
+          <p class="muted tiny">
+            Note: This is a static-site gate that hides the link in the browser. It is not a secure access control method.
+          </p>
         </div>
-
-        <div class="spacer"></div>
-
-        <p class="muted" style="font-size: 13px;">
-          Tip: Put your installer or zip inside <code>downloads/</code>, for example:
-          <code>downloads/CortexLab.zip</code>.
-        </p>
       </div>
     </section>
 
@@ -204,7 +232,55 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Reveal animation using IntersectionObserver
+    // ===== Password gate settings =====
+    // Replace with your real password (keep it simple if you only want a basic gate).
+    const COR_TLAB_PASSWORD = "REPLACE_WITH_YOUR_PASSWORD";
+
+    const passEl = document.getElementById("dl-pass");
+    const unlockBtn = document.getElementById("dl-unlock");
+    const msgEl = document.getElementById("dl-msg");
+    const actionsEl = document.getElementById("dl-actions");
+
+    function setUnlocked(isUnlocked) {
+      if (isUnlocked) {
+        actionsEl.hidden = false;
+        msgEl.textContent = "Unlocked. You can download now.";
+        msgEl.classList.remove("is-bad");
+        msgEl.classList.add("is-good");
+        try { sessionStorage.setItem("cortexlab_unlocked", "1"); } catch (e) {}
+      } else {
+        actionsEl.hidden = true;
+        msgEl.textContent = "Incorrect password. Try again.";
+        msgEl.classList.remove("is-good");
+        msgEl.classList.add("is-bad");
+      }
+    }
+
+    // Restore unlock state for this tab if available
+    try {
+      if (sessionStorage.getItem("cortexlab_unlocked") === "1") {
+        setUnlocked(true);
+      }
+    } catch (e) {}
+
+    function tryUnlock() {
+      const v = (passEl.value || "").trim();
+      if (!v) {
+        msgEl.textContent = "Please enter the password.";
+        msgEl.classList.remove("is-good");
+        msgEl.classList.add("is-bad");
+        actionsEl.hidden = true;
+        return;
+      }
+      setUnlocked(v === COR_TLAB_PASSWORD);
+    }
+
+    unlockBtn.addEventListener("click", tryUnlock);
+    passEl.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") tryUnlock();
+    });
+
+    // Reveal animation
     (function () {
       const els = document.querySelectorAll(".reveal");
       if (!("IntersectionObserver" in window) || els.length === 0) {
@@ -225,69 +301,6 @@
         obs.observe(el);
       });
     })();
-
-    // Password gate (UI gate only, not secure access control)
-    // Replace this hash with the SHA-256 hash of your real password.
-    // To generate: open DevTools Console and run:
-    // crypto.subtle.digest("SHA-256", new TextEncoder().encode("YOUR_PASSWORD"))
-    //   .then(b => [...new Uint8Array(b)].map(x => x.toString(16).padStart(2,"0")).join(""))
-    const PASSWORD_SHA256_HEX = "REPLACE_WITH_YOUR_SHA256_HEX";
-    const DOWNLOAD_URL = "../downloads/CortexLab.zip";  // Replace with your real file path
-
-    const passEl = document.getElementById("dl-pass");
-    const unlockBtn = document.getElementById("dl-unlock");
-    const msgEl = document.getElementById("dl-msg");
-    const linkEl = document.getElementById("dl-link");
-
-    function setLocked(message) {
-      msgEl.textContent = message || "";
-      linkEl.href = "";
-      linkEl.classList.add("btn-disabled");
-      linkEl.setAttribute("aria-disabled", "true");
-    }
-
-    function setUnlocked(message) {
-      msgEl.textContent = message || "";
-      linkEl.href = DOWNLOAD_URL;
-      linkEl.classList.remove("btn-disabled");
-      linkEl.setAttribute("aria-disabled", "false");
-    }
-
-    async function sha256Hex(text) {
-      const data = new TextEncoder().encode(text);
-      const hashBuf = await crypto.subtle.digest("SHA-256", data);
-      const hashArr = Array.from(new Uint8Array(hashBuf));
-      return hashArr.map((b) => b.toString(16).padStart(2, "0")).join("");
-    }
-
-    unlockBtn.addEventListener("click", async () => {
-      const pwd = (passEl.value || "").trim();
-      if (!pwd) {
-        setLocked("Please enter the password.");
-        return;
-      }
-
-      try {
-        const hex = await sha256Hex(pwd);
-        if (hex === PASSWORD_SHA256_HEX) {
-          setUnlocked("Unlocked. You can download CortexLab now.");
-        } else {
-          setLocked("Incorrect password. Download is still locked.");
-        }
-      } catch (err) {
-        setLocked("Error verifying password in this browser.");
-      }
-    });
-
-    // Prevent clicking the download link while locked
-    linkEl.addEventListener("click", (e) => {
-      if (linkEl.getAttribute("aria-disabled") === "true") {
-        e.preventDefault();
-      }
-    });
-
-    // Start locked
-    setLocked("");
   </script>
 </body>
 </html>
