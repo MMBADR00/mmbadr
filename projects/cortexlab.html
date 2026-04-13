@@ -1,4 +1,3 @@
-<!-- projects/cortexlab.html -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -136,61 +135,6 @@
       color: rgba(233,239,255,0.95);
       font-weight: 650;
     }
-
-    /* Modal */
-    .modal-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.55);
-      backdrop-filter: blur(6px);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 2000;
-      padding: 18px;
-    }
-
-    .modal-overlay.open { display: flex; }
-
-    .modal {
-      width: min(520px, 100%);
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(7, 12, 20, 0.92);
-      box-shadow: 0 22px 60px rgba(0,0,0,0.65);
-      padding: 16px;
-    }
-
-    .modal h3 {
-      margin: 0;
-      font-size: 16px;
-      color: rgba(233,239,255,0.95);
-      letter-spacing: 0.15px;
-    }
-
-    .modal p {
-      margin: 10px 0 0 0;
-      color: rgba(169,182,211,0.96);
-      line-height: 1.65;
-      font-size: 14px;
-    }
-
-    .modal-actions {
-      display: flex;
-      justify-content: flex-end;
-      gap: 10px;
-      margin-top: 14px;
-    }
-
-    .btn-close {
-      border-color: rgba(255,255,255,0.18);
-      background: rgba(255,255,255,0.03);
-    }
-
-    .btn-close:hover {
-      border-color: rgba(102,163,255,0.55);
-      background: rgba(255,255,255,0.05);
-    }
   </style>
 </head>
 
@@ -253,8 +197,21 @@
       <div class="section-head"><h2>Tools</h2></div>
       <div class="card">
         <div class="tool-grid" role="list" aria-label="CortexLab integrated tools">
+
+          <!-- Row 1 -->
           <article class="tool-card reveal" role="listitem">
-            <img class="tool-icon" src="../assets/tools/DocumentationIcon.png" alt="Documentation tool icon" loading="lazy" />
+            <img class="tool-icon" src="../assets/tools/MathStudioIcon.png" alt="Math Studio tool icon" loading="lazy" />
+            <div>
+              <h3 class="tool-title">Math Studio</h3>
+              <p class="tool-desc">
+                This tool supports mathematical analysis and computation workflows, including equation handling,
+                symbolic and numerical operations, and interactive problem solving within the CortexLab environment.
+              </p>
+            </div>
+          </article>
+
+          <article class="tool-card reveal" role="listitem">
+            <img class="tool-icon" src="../assets/tools/DocumentationIcon.png" alt="Supplementary Materials tool icon" loading="lazy" />
             <div>
               <h3 class="tool-title">Supplementary Materials</h3>
               <p class="tool-desc">
@@ -264,19 +221,9 @@
             </div>
           </article>
 
+          <!-- Row 2 -->
           <article class="tool-card reveal" role="listitem">
-            <img class="tool-icon" src="../assets/tools/DriveCycleIcon.png" alt="Drive Cycle tool icon" loading="lazy" />
-            <div>
-              <h3 class="tool-title">Drive Cycle Generator</h3>
-              <p class="tool-desc">
-                This tool supports generating and analyzing drive cycles, including route based motion profiles and
-                visualization for EV related studies.
-              </p>
-            </div>
-          </article>
-
-          <article class="tool-card reveal" role="listitem">
-            <img class="tool-icon" src="../assets/tools/ConnectionIcon.png" alt="Connection tool icon" loading="lazy" />
+            <img class="tool-icon" src="../assets/tools/ConnectionIcon.png" alt="Battery Configuration tool icon" loading="lazy" />
             <div>
               <h3 class="tool-title">Battery Configuration</h3>
               <p class="tool-desc">
@@ -288,7 +235,7 @@
           </article>
 
           <article class="tool-card reveal" role="listitem">
-            <img class="tool-icon" src="../assets/tools/BatteryKPIsIcon.png" alt="Battery KPIs tool icon" loading="lazy" />
+            <img class="tool-icon" src="../assets/tools/BatteryKPIsIcon.png" alt="Battery Performance Metrics tool icon" loading="lazy" />
             <div>
               <h3 class="tool-title">Battery Performance Metrics</h3>
               <p class="tool-desc">
@@ -299,30 +246,9 @@
             </div>
           </article>
 
+          <!-- Row 3 -->
           <article class="tool-card reveal" role="listitem">
-            <img class="tool-icon" src="../assets/tools/MachineLearningPredictionIcon.png" alt="Machine Learning Prediction tool icon" loading="lazy" />
-            <div>
-              <h3 class="tool-title">Machine Learning Prediction</h3>
-              <p class="tool-desc">
-                This tool supports regression based prediction workflows, including data upload, feature and target
-                selection, training and testing, evaluation metrics, plotting, and exporting models.
-              </p>
-            </div>
-          </article>
-
-          <article class="tool-card reveal" role="listitem">
-            <img class="tool-icon" src="../assets/tools/OfflineStateEstimationIcon.png" alt="Offline State Estimation tool icon" loading="lazy" />
-            <div>
-              <h3 class="tool-title">Battery State Estimation</h3>
-              <p class="tool-desc">
-                This tool supports offline SOC estimation workflows, including Coulomb Counting, rated capacity
-                estimation, and comparison plots. It includes configuration, analysis, and export features.
-              </p>
-            </div>
-          </article>
-
-          <article class="tool-card reveal" role="listitem">
-            <img class="tool-icon" src="../assets/tools/OCVSOCAnalysisIcon.png" alt="OCV-SOC Analysis tool icon" loading="lazy" />
+            <img class="tool-icon" src="../assets/tools/OCVSOCAnalysisIcon.png" alt="OCV-SOC Modeling tool icon" loading="lazy" />
             <div>
               <h3 class="tool-title">OCV-SOC Modeling</h3>
               <p class="tool-desc">
@@ -333,7 +259,65 @@
           </article>
 
           <article class="tool-card reveal" role="listitem">
-            <img class="tool-icon" src="../assets/tools/RTMonitoringIcon.png" alt="Real Time Monitoring tool icon" loading="lazy" />
+            <img class="tool-icon" src="../assets/tools/OfflineStateEstimationIcon.png" alt="Battery State Estimation tool icon" loading="lazy" />
+            <div>
+              <h3 class="tool-title">Battery State Estimation</h3>
+              <p class="tool-desc">
+                This tool supports offline SOC estimation workflows, including Coulomb Counting, rated capacity
+                estimation, and comparison plots. It includes configuration, analysis, and export features.
+              </p>
+            </div>
+          </article>
+
+          <!-- Row 4 -->
+          <article class="tool-card reveal" role="listitem">
+            <img class="tool-icon" src="../assets/tools/ECmodelingIcon.png" alt="Equivalent-Circuit Modeling tool icon" loading="lazy" />
+            <div>
+              <h3 class="tool-title">Equivent-circuit Modeling</h3>
+              <p class="tool-desc">
+                This tool supports equivalent-circuit based battery modeling workflows, including model structure
+                definition, parameter identification, and analysis of battery dynamic behavior.
+              </p>
+            </div>
+          </article>
+
+          <article class="tool-card reveal" role="listitem">
+            <img class="tool-icon" src="../assets/tools/DriveCycleIcon.png" alt="Drive Cycle Generator tool icon" loading="lazy" />
+            <div>
+              <h3 class="tool-title">Drive Cycle Generator</h3>
+              <p class="tool-desc">
+                This tool supports generating and analyzing drive cycles, including route based motion profiles and
+                visualization for EV related studies.
+              </p>
+            </div>
+          </article>
+
+          <!-- Row 5 -->
+          <article class="tool-card reveal" role="listitem">
+            <img class="tool-icon" src="../assets/tools/MachineLearningPredictionIcon.png" alt="Machine Learning Regression tool icon" loading="lazy" />
+            <div>
+              <h3 class="tool-title">Machine Learning Techniues-based Regression</h3>
+              <p class="tool-desc">
+                This tool supports regression based prediction workflows, including data upload, feature and target
+                selection, training and testing, evaluation metrics, plotting, and exporting models.
+              </p>
+            </div>
+          </article>
+
+          <article class="tool-card reveal" role="listitem">
+            <img class="tool-icon" src="../assets/tools/MachineLearningClassificationIcon.png" alt="Machine Learning Classification tool icon" loading="lazy" />
+            <div>
+              <h3 class="tool-title">Machine Learning Techniues-based Classifcation</h3>
+              <p class="tool-desc">
+                This tool supports classification workflows, including data upload, feature and class selection,
+                training and evaluation, confusion matrix, and exporting classifiers.
+              </p>
+            </div>
+          </article>
+
+          <!-- Row 6 -->
+          <article class="tool-card reveal" role="listitem">
+            <img class="tool-icon" src="../assets/tools/RTMonitoringIcon.png" alt="Real-Time Monitoring tool icon" loading="lazy" />
             <div>
               <h3 class="tool-title">Real-Time Monitoring</h3>
               <p class="tool-desc">
@@ -343,27 +327,6 @@
             </div>
           </article>
 
-          <article class="tool-card reveal" role="listitem">
-            <img class="tool-icon" src="../assets/tools/MachineLearningClassificationIcon.png" alt="Machine Learning Classification tool icon" loading="lazy" />
-            <div>
-              <h3 class="tool-title">Machine Learning Classification</h3>
-              <p class="tool-desc">
-                This tool supports classification workflows, including data upload, feature and class selection,
-                training and evaluation, confusion matrix, and exporting classifiers.
-              </p>
-            </div>
-          </article>
-
-          <article class="tool-card reveal" role="listitem">
-            <img class="tool-icon" src="../assets/tools/MathStudioIcon.png" alt="Math Studio tool icon" loading="lazy" />
-            <div>
-              <h3 class="tool-title">Math Studio</h3>
-              <p class="tool-desc">
-                This tool supports mathematical analysis and computation workflows, including equation handling,
-                symbolic and numerical operations, and interactive problem solving within the CortexLab environment.
-              </p>
-            </div>
-          </article>
         </div>
       </div>
     </section>
@@ -372,32 +335,19 @@
       <div class="section-head"><h2>Download</h2></div>
       <div class="card">
         <div class="download-grid" aria-label="CortexLab download versions">
-          <!-- V1.9.0 -->
           <div class="download-card reveal">
-            <h3 class="download-title">CortexLab V1.9.0</h3>
+            <h3 class="download-title">CortexLab V1.11.0</h3>
             <p class="download-text">
-              This version includes Supplementary Materials, Drive Cycle Generator, Battery Configuration, Battery Performance Metrics,
-              Machine Learning Prediction, Battery State Estimation, OCV-SOC Modeling, Real-Time Monitoring, and Math Studio.
+              This version includes Math Studio, Supplementary Materials, Battery Configuration, Battery Performance Metrics,
+              OCV-SOC Modeling, Battery State Estimation, Equivent-circuit Modeling, Drive Cycle Generator,
+              Machine Learning Techniues-based Regression, Machine Learning Techniues-based Classifcation,
+              and Real-Time Monitoring.
             </p>
-            <p class="download-date"><strong>Date:</strong> 06 March 2026</p>
+            <p class="download-date"><strong>Date:</strong> 14 April 2026</p>
             <div class="btn-row">
               <a class="btn" target="_blank" rel="noopener"
-                 href="https://drive.google.com/drive/folders/14u8Ymy6lFCp6CbHI_5I67x9N7HLfGLU9?usp=drive_link">
-                Download CortexLab V1.9.0
-              </a>
-            </div>
-          </div>
-
-          <!-- V1.10.0 -->
-          <div class="download-card reveal">
-            <h3 class="download-title">CortexLab V1.10.0</h3>
-            <p class="download-text">
-              This version includes all tools available in CortexLab V1.9.0 and additionally includes Machine Learning Classification and Model-based Methods.
-            </p>
-            <div class="btn-row">
-              <a id="dl-v1100" class="btn" target="_blank" rel="noopener"
-                 href="https://drive.google.com/drive/folders/1w0-qN9ysdqVgR4RPBCCt6kRBDQruHroC?usp=sharing">
-                Download CortexLab V1.10.0
+                 href="https://drive.google.com/drive/folders/1A_BBnyzH3RbacP6iepiNmQjNX0EI-DyX?usp=sharing">
+                Download CortexLab V1.11.0
               </a>
             </div>
           </div>
@@ -409,17 +359,6 @@
       <p>© <span id="year"></span> Mohamed M. Badr. Hosted on GitHub Pages.</p>
     </footer>
   </main>
-
-  <!-- Modal -->
-  <div id="version-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="vm-title" aria-describedby="vm-desc">
-    <div class="modal">
-      <h3 id="vm-title">CortexLab V1.10.0</h3>
-      <p id="vm-desc">This version is under development.</p>
-      <div class="modal-actions">
-        <button id="vm-close" class="btn btn-close" type="button">Close</button>
-      </div>
-    </div>
-  </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
@@ -442,42 +381,6 @@
       els.forEach((el, idx) => {
         el.style.setProperty("--reveal-delay", (idx * 60) + "ms");
         obs.observe(el);
-      });
-    })();
-
-    (function () {
-      const link = document.getElementById("dl-v1100");
-      const modal = document.getElementById("version-modal");
-      const closeBtn = document.getElementById("vm-close");
-
-      if (!link || !modal || !closeBtn) return;
-
-      function openModal() {
-        modal.classList.add("open");
-        closeBtn.focus();
-      }
-
-      function closeModal() {
-        modal.classList.remove("open");
-        link.focus();
-      }
-
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-        openModal();
-      });
-
-      closeBtn.addEventListener("click", function () {
-        closeModal();
-      });
-
-      modal.addEventListener("click", function (e) {
-        if (e.target === modal) closeModal();
-      });
-
-      document.addEventListener("keydown", function (e) {
-        if (!modal.classList.contains("open")) return;
-        if (e.key === "Escape") closeModal();
       });
     })();
   </script>
