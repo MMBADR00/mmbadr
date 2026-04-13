@@ -13,9 +13,21 @@
   </script>
 
   <style>
-    .crumbs { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-    .crumbs a { color: rgba(169,182,211,0.92); }
-    .crumbs a:hover { color: var(--text); text-decoration: none; }
+    .crumbs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .crumbs a {
+      color: rgba(169,182,211,0.92);
+    }
+
+    .crumbs a:hover {
+      color: var(--text);
+      text-decoration: none;
+    }
 
     .tool-grid {
       display: grid;
@@ -25,7 +37,9 @@
     }
 
     @media (max-width: 820px) {
-      .tool-grid { grid-template-columns: 1fr; }
+      .tool-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .tool-card {
@@ -100,7 +114,9 @@
     }
 
     @media (max-width: 820px) {
-      .download-grid { grid-template-columns: 1fr; }
+      .download-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .download-card {
@@ -109,6 +125,10 @@
       border-radius: 16px;
       background: rgba(255,255,255,0.03);
       box-shadow: 0 18px 42px rgba(0,0,0,0.30);
+    }
+
+    .download-card.full-width {
+      grid-column: 1 / -1;
     }
 
     .download-title {
@@ -271,7 +291,7 @@
 
           <!-- Row 4 -->
           <article class="tool-card reveal" role="listitem">
-            <img class="tool-icon" src="../assets/tools/ECmodelingIcon.png" alt="Equivalent-Circuit Modeling tool icon" loading="lazy" />
+            <img class="tool-icon" src="../assets/tools/ECmodelingIcon.png" alt="Equivalent-circuit Modeling tool icon" loading="lazy" />
             <div>
               <h3 class="tool-title">Equivent-circuit Modeling</h3>
               <p class="tool-desc">
@@ -294,7 +314,7 @@
 
           <!-- Row 5 -->
           <article class="tool-card reveal" role="listitem">
-            <img class="tool-icon" src="../assets/tools/MachineLearningPredictionIcon.png" alt="Machine Learning Regression tool icon" loading="lazy" />
+            <img class="tool-icon" src="../assets/tools/MachineLearningPredictionIcon.png" alt="Machine Learning Techniques-based Regression tool icon" loading="lazy" />
             <div>
               <h3 class="tool-title">Machine Learning Techniues-based Regression</h3>
               <p class="tool-desc">
@@ -305,7 +325,7 @@
           </article>
 
           <article class="tool-card reveal" role="listitem">
-            <img class="tool-icon" src="../assets/tools/MachineLearningClassificationIcon.png" alt="Machine Learning Classification tool icon" loading="lazy" />
+            <img class="tool-icon" src="../assets/tools/MachineLearningClassificationIcon.png" alt="Machine Learning Techniques-based Classification tool icon" loading="lazy" />
             <div>
               <h3 class="tool-title">Machine Learning Techniues-based Classifcation</h3>
               <p class="tool-desc">
@@ -335,7 +355,8 @@
       <div class="section-head"><h2>Download</h2></div>
       <div class="card">
         <div class="download-grid" aria-label="CortexLab download versions">
-          <div class="download-card reveal">
+
+          <div class="download-card full-width reveal">
             <h3 class="download-title">CortexLab V1.11.0</h3>
             <p class="download-text">
               This version includes Math Studio, Supplementary Materials, Battery Configuration, Battery Performance Metrics,
@@ -351,6 +372,7 @@
               </a>
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -369,6 +391,7 @@
         els.forEach((el) => el.classList.add("in"));
         return;
       }
+
       const obs = new IntersectionObserver((entries) => {
         entries.forEach((e) => {
           if (e.isIntersecting) {
