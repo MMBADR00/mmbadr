@@ -233,8 +233,9 @@
             <div>
               <h3 class="tool-title">Math Studio</h3>
               <p class="tool-desc">
-                This tool supports mathematical analysis and computation workflows, including equation handling,
-                symbolic and numerical operations, and interactive problem solving within the CortexLab environment.
+                It is the general-purpose computation workspace. It combines a workspace environment, calculator tools,
+                and matrix operations. The embedded workspace supports commands, variables, file operations, and
+                plotting. It is used for custom mathematical analysis beyond predefined battery tools.
               </p>
             </div>
           </article>
@@ -244,8 +245,10 @@
             <div>
               <h3 class="tool-title">Supplementary Materials</h3>
               <p class="tool-desc">
-                This tool provides an organized viewer for manuals, references, and application guidance.
-                It helps users navigate tool descriptions, usage steps, and supporting technical notes.
+                It is the application reference resource. It is not an analysis tool; it is a curated documentation
+                browser that opens bundled CortexLab documents, research data references, and downloadable code or
+                data packages that support the other tools. It is intended for accessing manuals, research papers,
+                datasets, and example repositories.
               </p>
             </div>
           </article>
@@ -256,9 +259,11 @@
             <div>
               <h3 class="tool-title">Battery Configuration</h3>
               <p class="tool-desc">
-                This tool provides an interactive graphical simulation environment for constructing battery pack
-                configurations, supporting Series, Parallel, and Combined (Series Parallel) arrangements. It enables
-                users to define the number of cells and modules and visualizes the resulting topology.
+                It is the pack topology builder. Series, parallel, or combined configurations are selected, and cell
+                voltage and capacity are entered along with the number of cells connected in series and the number
+                of cells connected in parallel. The tool computes pack-level voltage, capacity, and energy, and
+                visualizes the electrical layout. It supports both numerical calculation and graphical explanation
+                of pack architecture.
               </p>
             </div>
           </article>
@@ -268,9 +273,10 @@
             <div>
               <h3 class="tool-title">Battery Performance Metrics</h3>
               <p class="tool-desc">
-                This tool estimates key battery performance indicators, including State of Charge (SOC), State of Health
-                (SOH), State of Power (SOP), Remaining Useful Life (RUL), and Depth of Discharge (DOD). It supports
-                different estimation methods and allows exporting results.
+                It is a key performance indicator calculator rather than a full modeling pipeline. It evaluates
+                operational metrics such as state-of-charge, state-of-power, state-of-energy, state-of-health,
+                and remaining useful life. It presents equations, results tables, and visualizations. It is
+                intended for quick evaluation of battery performance indicators.
               </p>
             </div>
           </article>
@@ -281,8 +287,11 @@
             <div>
               <h3 class="tool-title">OCV-SOC Modeling</h3>
               <p class="tool-desc">
-                This tool performs Open Circuit Voltage based SOC estimation using polynomial fitting and chi-squared
-                error analysis. It supports importing data, plotting OCV-SOC curves, and exporting fitted models.
+                It builds an open-circuit voltage to state-of-charge relationship from uploaded data. It supports
+                selection of measurement and voltage columns, data inspection, cleaning of anomalies and missing
+                values, and polynomial fitting with chi-squared error minimization. It also enables estimation
+                of state-of-charge from a given open-circuit voltage value. It is used for constructing the
+                static voltage to state-of-charge mapping.
               </p>
             </div>
           </article>
@@ -292,20 +301,26 @@
             <div>
               <h3 class="tool-title">Battery State Estimation</h3>
               <p class="tool-desc">
-                This tool supports offline SOC estimation workflows, including Coulomb Counting, rated capacity
-                estimation, and comparison plots. It includes configuration, analysis, and export features.
+                It is the estimation tool for recorded battery datasets. It supports loading comma-separated values
+                or Excel files, data preview and cleaning, range selection, and execution of state-of-charge and
+                state-of-health estimation workflows. Methods include Coulomb counting for state-of-charge
+                estimation and capacity fade method for state-of-health estimation. It is intended for analysis
+                of previously collected battery data.
               </p>
             </div>
           </article>
 
           <!-- Row 4 -->
           <article class="tool-card reveal" role="listitem">
-            <img class="tool-icon" src="../assets/tools/ECmodelingIcon.png" alt="Equivalent-circuit Modeling tool icon" loading="lazy" />
+            <img class="tool-icon" src="../assets/tools/ECmodelingIcon.png" alt="Equivalent Circuit Modeling tool icon" loading="lazy" />
             <div>
-              <h3 class="tool-title">Equivent-circuit Modeling</h3>
+              <h3 class="tool-title">Equivalent Circuit Modeling</h3>
               <p class="tool-desc">
-                This tool supports equivalent-circuit based battery modeling workflows, including model structure
-                definition, parameter identification, and analysis of battery dynamic behavior.
+                It is the dynamic model identification tool. It identifies a first-order Thevenin equivalent circuit
+                model using methods such as least squares, Levenberg-Marquardt, and recursive least squares. It
+                also validates the model using filters such as extended Kalman filter, adaptive extended Kalman
+                filter, unscented Kalman filter, adaptive unscented Kalman filter, and particle filter. It is
+                used for parameter identification, terminal voltage reconstruction, and model validation.
               </p>
             </div>
           </article>
@@ -315,31 +330,38 @@
             <div>
               <h3 class="tool-title">Drive Cycle Generator</h3>
               <p class="tool-desc">
-                This tool supports generating and analyzing drive cycles, including route based motion profiles and
-                visualization for EV related studies.
+                It builds a route-based electric vehicle drive cycle. Origin and destination coordinates are entered,
+                along with Google Maps and OpenWeather application programming interface keys, and optional tuning
+                of behavior factor and uphill tolerance. The outputs include a generated route dataset, speed
+                profile, wind-compass plot, and embedded map. It is used to generate realistic driving profiles
+                for battery studies.
               </p>
             </div>
           </article>
 
           <!-- Row 5 -->
           <article class="tool-card reveal" role="listitem">
-            <img class="tool-icon" src="../assets/tools/MachineLearningPredictionIcon.png" alt="Machine Learning Techniques-based Regression tool icon" loading="lazy" />
+            <img class="tool-icon" src="../assets/tools/MachineLearningPredictionIcon.png" alt="Machine Learning Regression tool icon" loading="lazy" />
             <div>
-              <h3 class="tool-title">Machine Learning Techniues-based Regression</h3>
+              <h3 class="tool-title">Machine Learning Regression</h3>
               <p class="tool-desc">
-                This tool supports regression based prediction workflows, including data upload, feature and target
-                selection, training and testing, evaluation metrics, plotting, and exporting models.
+                It is an end-to-end regression pipeline. It supports data upload, preprocessing, feature and target
+                selection, train and test splitting, model training, hyperparameter tuning, validation, evaluation
+                metrics, visualization, and model export. It is used for continuous numerical prediction tasks
+                such as state-of-charge estimation.
               </p>
             </div>
           </article>
 
           <article class="tool-card reveal" role="listitem">
-            <img class="tool-icon" src="../assets/tools/MachineLearningClassificationIcon.png" alt="Machine Learning Techniques-based Classification tool icon" loading="lazy" />
+            <img class="tool-icon" src="../assets/tools/MachineLearningClassificationIcon.png" alt="Machine Learning Classification tool icon" loading="lazy" />
             <div>
-              <h3 class="tool-title">Machine Learning Techniues-based Classifcation</h3>
+              <h3 class="tool-title">Machine Learning Classification</h3>
               <p class="tool-desc">
-                This tool supports classification workflows, including data upload, feature and class selection,
-                training and evaluation, confusion matrix, and exporting classifiers.
+                It is the classification counterpart to the regression tool. It follows a similar pipeline but focuses
+                on classification models, evaluation metrics, and outputs such as confusion matrices and multi-class
+                predictions. It is used when the target variable represents categorical labels such as fault
+                detection or health classification.
               </p>
             </div>
           </article>
@@ -350,8 +372,11 @@
             <div>
               <h3 class="tool-title">Real-Time Monitoring</h3>
               <p class="tool-desc">
-                This tool interfaces with Arduino based sensing to monitor voltage, current, and temperature. It also
-                supports real-time Coulomb Counting and data driven predictions using trained models.
+                It is the live hardware interface tool. It connects to Arduino or Firmata, maps analog pins to
+                voltage, current, and temperature sensors, and streams data in real time. It supports real-time
+                battery state estimation and applies machine learning models for both estimation and classification
+                on incoming data. It includes visualization dashboards for sensors, battery states, and
+                data-driven outputs.
               </p>
             </div>
           </article>
@@ -369,9 +394,8 @@
             <h3 class="download-title">CortexLab V1.11.0</h3>
             <p class="download-text">
               This version includes Math Studio, Supplementary Materials, Battery Configuration, Battery Performance Metrics,
-              OCV-SOC Modeling, Battery State Estimation, Equivent-circuit Modeling, Drive Cycle Generator,
-              Machine Learning Techniues-based Regression, Machine Learning Techniues-based Classifcation,
-              and Real-Time Monitoring.
+              OCV-SOC Modeling, Battery State Estimation, Equivalent Circuit Modeling, Drive Cycle Generator,
+              Machine Learning Regression, Machine Learning Classification, and Real-Time Monitoring.
             </p>
             <p class="download-date"><strong>Date:</strong> 14 April 2026</p>
             <div class="download-btn-row">
